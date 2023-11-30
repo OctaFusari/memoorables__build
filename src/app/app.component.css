@@ -1,0 +1,16 @@
+.scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+    height: 100vh;
+    background-color: blue;
+    scroll-snap-align: start;
+    margin: 0;
+}
+
+ ::-webkit-scrollbar {
+    width: 0 !important;
+}

@@ -9,5 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  octimal(){
+    window.location.href = "https://octimal.it/";
+  }
 
 }

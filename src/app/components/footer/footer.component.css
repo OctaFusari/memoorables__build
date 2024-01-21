@@ -25,7 +25,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
 .dl__social__icons {
@@ -44,7 +43,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99;
 }
 
 .divOcti {

@@ -1,17 +1,116 @@
-.scroller {
+#section__up {
+    position: fixed;
     height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 0;
+    transform: translate3d(0px, 0%, 0px)
+}
+
+#section__center {
+    position: fixed;
+    height: 100vh;
+    margin: 0 0 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translate3d(0px, 100%, 0px)
+}
+
+#section__one__inside__due {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 0 0;
+    z-index: 2;
+    transform: translate3d(0px, 100%, 0px)
+}
+
+#footerdiv {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 0 0;
+    z-index: 3;
+    transform: translate3d(0px, 100%, 0px)
+}
+
+#navbar__sotto {
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    overflow-x: hidden !important;
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . .";
+    margin: 0 0 40px 0;
+}
+
+.navbar__sotto__sec__due {
+    text-align: center;
+}
+
+.navbar__sotto__line {
+    background-color: #ffffff;
+    height: 3px;
+    width: 100%;
+}
+
+.scroller {
+    /*     height: 100vh;
+        overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
 }
 
 .scroller section {
     height: 100vh;
     scroll-snap-align: start;
     margin: 0;
+    animation: cardanimation__2 2.5s;
+}
+
+@keyframes cardanimation__2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
  ::-webkit-scrollbar {
     width: 0 !important;
+}
+
+#loading__page {
+    display: none;
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    color: #1E1E1E;
+    background: red;
+}
+
+#loading__page span {
+    font-size: 10rem;
+    font-weight: 800;
+    color: #1e1e1e10;
 }
 
 #loading__page p {
@@ -77,24 +176,19 @@
     z-index: 99;
 }
 
-.section__begin h1,
-p {
-    color: #1E1E1E;
+.section__begin {
+    background: linear-gradient(to top, #1e1e1eb9 1%, #1e1e1eb9 99%), url("../../../assets/image__home/img__iniziale.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__begin__title {
     text-align: center;
-}
-
-#loading__page {
-    width: 100%;
-    position: fixed;
-    height: 100vh;
-    color: #1E1E1E;
-    background: red;
-}
-
-#loading__page span {
-    font-size: 10rem;
-    font-weight: 800;
-    color: #1e1e1e10;
 }
 
 .lp__1 section {
@@ -129,6 +223,58 @@ p {
 
 .divOcti:hover .dO_interno {
     height: 8px;
+}
+
+.section__one {
+    background: linear-gradient(to top, #1e1e1ef1 1%, #1e1e1ef1 99%), url("../../../assets/image__home/img__iniziale.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". section__one__inside__one section__one__inside__due .";
+}
+
+.section__one__inside__one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    grid-area: section__one__inside__one;
+}
+
+.section__one__inside__due {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: section__one__inside__due;
+}
+
+.section__one__inside__one div {
+    width: 400px;
+}
+
+.button__circle__big {
+    background-color: #ff0000;
+    margin: 10px;
+    border: 1px solid #ff0000;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+}
+
+.button__circle {
+    background-color: #ff0000;
+    border: 3px solid #1e1e1e;
+    width: 140px;
+    height: 140px;
+    border-radius: 150px;
+}
+
+.button__circle:hover {
+    border: 5px solid #1e1e1e;
 }
 
 @media only screen and (max-width: 800px) {

@@ -1,0 +1,51 @@
+#navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    overflow-x: hidden !important;
+    margin-top: 40px;
+}
+
+#navbar div {
+    padding: 0 10vw 0 10vw;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu {
+    display: block;
+}
+
+.nav__contatti h3:last-of-type {
+    margin-right: -20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #navbar {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #navbar div {
+        width: fit-content;
+    }
+    #navbar {
+        padding: 10px 0 10px 0;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}

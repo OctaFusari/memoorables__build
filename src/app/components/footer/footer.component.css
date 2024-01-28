@@ -9,12 +9,6 @@
     /* Standard syntax */
 }
 
-.dl__social__icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .divcenter {
     cursor: pointer;
     width: 60px;
@@ -28,9 +22,25 @@
 }
 
 .dl__social__icons {
+    width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container__footer__centro {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__footer__centro__due {
+    margin: 0 300px 0 0;
+}
+
+.container__footer__centro__due {
+    margin: 0 0 0 300px;
 }
 
 .div__fund {
@@ -82,9 +92,7 @@
 }
 
 .descrizione__loading {
-    text-align: center;
     width: 100%;
-    margin-top: 24vh;
     position: relative;
     z-index: 99;
 }
@@ -92,7 +100,6 @@
 #loading__page {
     padding: 20vh;
     height: 80vh;
-    background-color: #FF0000;
 }
 
 #loading__page span {
@@ -101,14 +108,38 @@
     color: #1e1e1e10;
 }
 
-#loading__page p {
-    font-size: 2rem;
+.desc__left {
+    width: 410px;
 }
 
-#loading__page h1 {
-    margin-top: -20px;
-    font-size: 4rem;
-    margin-bottom: 0
+.desc__left div {
+    margin: -100px 0 0 100px;
+}
+
+.social__container {
+    margin: 40px 0 0 0;
+    display: flex;
+}
+
+.iscriviti {
+    background-color: #FF0000;
+    border: none;
+    border-bottom: 4px solid #1E1E1E;
+    min-width: 250px;
+    color: rgba(30, 30, 30, 0.67);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    box-shadow: none;
+    margin-right: 20px;
+}
+
+.button__black {
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    background-color: #1E1E1E;
+    border: none;
 }
 
 @media only screen and (max-width: 800px) {

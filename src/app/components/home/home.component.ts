@@ -43,41 +43,18 @@ const touch = {
 
 const tlDefaults = {
   ease: "slow.inOut",
-  duration: 1.25
+  duration: 1
 };
-
-/* const splitHeadings = headings.map((heading:any) => {
-  return new SplitText(heading, {
-    type: "chars, words, lines",
-    linesClass: "clip-text"
-  });
-}); */
-
-/* function revealSectionHeading() {
-  return gsap.to(splitHeadings[next].chars, {
-    autoAlpha: 1,
-    yPercent: 0,
-    duration: 1,
-    ease: "power2",
-    stagger: {
-      each: 0.02,
-      from: "random"
-    }
-  });
-} */
 
 gsap.set(outerWrappers, { yPercent: 100 });
 gsap.set(innerWrappers, { yPercent: -100 });
 
-// Slides a section in on scroll down
+
 function slideIn() {
-  // The first time this function runs, current is undefined
   if (current !== undefined) gsap.set(sections[current], { zIndex: 0 });
 
   gsap.set(sections[next], { autoAlpha: 1, zIndex: 1 });
   gsap.set(images[next], { yPercent: 0 });
-/*   gsap.set(splitHeadings[next].chars, { autoAlpha: 0, yPercent: 100 });
- */
   const tl = gsap
     .timeline({
       paused: true,
@@ -89,8 +66,7 @@ function slideIn() {
     })
     .to([outerWrappers[next], innerWrappers[next]], { yPercent: 0 }, 0)
     .from(images[next], { yPercent: 15 }, 0)
-/*     .add(revealSectionHeading(), 0);
- */
+
   if (current !== undefined) {
     tl.add(
       gsap.to(images[current], {
@@ -111,11 +87,12 @@ function slideIn() {
   tl.play(0);
 }
 
-// Slides a section out on scroll up
 function slideOut() {
-  gsap.set(sections[current], { zIndex: 1 });
-  gsap.set(sections[next], { autoAlpha: 1, zIndex: 0 });
-/*   gsap.set(splitHeadings[next].chars, { autoAlpha: 0, yPercent: 100 }); */
+  console.log(current)
+  console.log(next)
+  gsap.set(sections[current], { zIndex: 0 });
+  gsap.set(sections[next], { autoAlpha: 1, zIndex: 1 });
+  
   gsap.set([outerWrappers[next], innerWrappers[next]], { yPercent: 0 });
   gsap.set(images[next], { yPercent: 0 });
 
@@ -131,7 +108,6 @@ function slideOut() {
     .to(innerWrappers[current], { yPercent: -100 }, 0)
     .to(images[current], { yPercent: 15 }, 0)
     .from(images[next], { yPercent: -15 }, 0)
-/*     .add(revealSectionHeading(), ">-1") */
     .set(images[current], { yPercent: 0 });
 }
 
@@ -181,10 +157,6 @@ function handleTouchEnd(e:any) {
 
 slideIn();
   }
-
-
-
-
 
   octimal(){
     window.location.href = "https://octimal.it/";

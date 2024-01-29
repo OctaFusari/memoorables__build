@@ -69,3 +69,68 @@
 .menu li {
     margin-right: 20px;
 }
+
+.cd-nav {
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+    /* overflow-y: scroll; */
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    -webkit-transition: visibility 0s 0.7s;
+    -moz-transition: visibility 0s 0.7s;
+    transition: visibility 0s 0.7s;
+    -webkit-transform: translateX(-110%);
+    -moz-transform: translateX(-110%);
+    -ms-transform: translateX(-110%);
+    -o-transform: translateX(-110%);
+    transform: translateX(-110%);
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    transition: transform 0.5s;
+    background-image: url("../../../assets/image__home/tavola1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.navigation-is-open .cd-nav {
+    visibility: visible;
+    -webkit-transition: visibility 0s 0.7s;
+    -moz-transition: visibility 0s 0.7s;
+    transition: visibility 0s 0.7s;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    transition: transform 0.5s;
+    overflow-x: hidden !important;
+}
+
+.cd-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    /* Center items horizontally */
+    overflow-x: hidden !important;
+}
+
+.cd__interno__secondario__inside {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 100px 0 100px 0;
+}
+
+.cd__interno__secondario__inside div:first-of-type {
+    margin: 0 40px 0 0;
+}

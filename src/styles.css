@@ -20,6 +20,10 @@ button:focus {
     outline: none;
 }
 
+p {
+    font-size: 1.3rem;
+}
+
 h1 {
     font-weight: 800;
     margin: 0;

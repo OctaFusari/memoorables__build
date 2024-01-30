@@ -134,3 +134,7 @@
 .cd__interno__secondario__inside div:first-of-type {
     margin: 0 40px 0 0;
 }
+
+.cd__interno__secondario__inside h1 {
+    cursor: pointer;
+}

@@ -5,11 +5,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StorieComponent } from './components/storie/storie.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'header', component: HeaderComponent },
-  { path: 'footer', component: FooterComponent },
-  { path: 'storie', component: StorieComponent }
+  {path:"header", component: HeaderComponent},
+  {path:"footer", component: FooterComponent},
+  { path: 'storie', component: StorieComponent },
+  {path:"**", component:HomeComponent}
 ];
 
 @NgModule({

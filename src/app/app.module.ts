@@ -25,12 +25,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         ReactiveFormsModule,
         RouterModule.forRoot([
             { path: '', component: HomeComponent },
-            { path: 'header', component: HeaderComponent },
-            { path: 'footer', component: FooterComponent },
-            { path: 'storie', component: StorieComponent }
-        ]),
-        HeaderComponent,
-        FooterComponent
+            {path:"header", component: HeaderComponent},
+            {path:"footer", component: FooterComponent},
+            { path: 'storie', component: StorieComponent },
+            {path:"**", component:HomeComponent}
+        ])
     ]
 })
 export class AppModule { }

@@ -29,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
             {path:"footer", component: FooterComponent},
             { path: 'storie', component: StorieComponent },
             {path:"**", component:HomeComponent}
-        ])
+        ]),HeaderComponent
     ]
 })
 export class AppModule { }

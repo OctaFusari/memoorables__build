@@ -10,6 +10,10 @@
     overflow-x: hidden !important;
 } */
 
+* {
+    transition-duration: .2s;
+}
+
 .menu {
     padding: 0 100px 0 100px;
     margin-top: 40px;
@@ -117,11 +121,80 @@
 }
 
 .cd-nav-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . ";
+}
+
+.cd__interno__primario {
     display: flex;
     align-items: center;
-    justify-content: right;
-    /* Center items horizontally */
-    overflow-x: hidden !important;
+    justify-content: center;
+}
+
+.see__more__big {
+    margin: 0 0 40px 40px;
+    height: 110px !important;
+    width: 110px !important;
+    border-radius: 110px;
+    background-color: #ff0000;
+    border: 4px solid #ff0000;
+    cursor: pointer;
+}
+
+.see__more__big svg {
+    margin-top: 30px;
+    margin-left: 27px;
+    position: absolute;
+    z-index: 1;
+}
+
+.see__more__big:hover {
+    background-color: #ff0000;
+    border: 4px solid #ff0000;
+}
+
+.see__more__big:hover svg {
+    fill: #ffffff;
+}
+
+.see__more__big:hover h2 {
+    padding-left: 90px;
+}
+
+.see__more__big h2 {
+    position: sticky;
+    z-index: 99;
+    width: 8cm;
+    padding-left: 25px;
+    margin: 38px 25px 32px 0;
+}
+
+.div__leggi__storia {
+    width: 8cm !important;
+}
+
+.cd-nav-trigger-inside_profile {
+    margin: 50px 0 0 100px;
+}
+
+.img__uno {
+    width: 500px;
+    height: 700px;
+    background-image: url("../../../assets/image__home/img__iniziale.jpg");
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cd__interno__secondario {
+    margin: 100px 0 100px 0;
 }
 
 .cd__interno__secondario__inside {

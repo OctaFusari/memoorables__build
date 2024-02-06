@@ -2,19 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-chi-siamo',
   standalone: false,
-/*   imports: [CommonModule], */
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  /* imports: [CommonModule], */
+  templateUrl: './chi-siamo.component.html',
+  styleUrl: './chi-siamo.component.css'
 })
-export class FooterComponent {
-
-  statusDonation: boolean = false;
-clickEventDonation(){
-    this.statusDonation = !this.statusDonation;       
-}
-
+export class ChiSiamoComponent {
   octimal(){
     window.location.href = "https://octimal.it/";
   }
@@ -37,4 +31,6 @@ clickEventDonation(){
   link__5(){
     window.location.href = "https://www.paypal.me/memoorablesPP?locale.x=it_IT";
   }
+  
+
 }

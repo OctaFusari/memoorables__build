@@ -1,9 +1,16 @@
 .container__interno {
-    padding: 200px 300px 200px 300px;
+    display: flex;
+    align-items: center;
+    padding: 200px 0 200px 0;
+    justify-content: center;
 }
 
-.container__interno__sezione__uno {
-    margin: 0 0 200px 0;
+.container__generale {
+    padding: 80px 0 0 0;
+}
+
+.container__interno__flex {
+    max-width: 1200px;
 }
 
 .container__interno__sezione__due h1 {
@@ -16,7 +23,7 @@
     background-image: url("../../../assets/image__home/img__iniziale.jpg");
     position: absolute;
     z-index: 1;
-    margin: 200px 0 0 -100px;
+    margin: 200px 0 0 -150px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -44,9 +51,46 @@
 }
 
 .third {
+    position: sticky;
+    z-index: 200;
     background-image: url("../../../assets/image__home/tavola1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-size: cover;
+}
+
+.cd__interno__secondario__inside {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 100px 0 100px 0;
+    z-index: 100;
+}
+
+.cd__interno__secondario__inside div:first-of-type {
+    margin: 0 40px 0 0;
+}
+
+.cd__interno__secondario__inside h1 {
+    cursor: pointer;
+}
+
+.tag__a__strong__uno {
+    display: inline-block;
+    transform: rotate(-4deg);
+    color: red;
+    font-family: "TradeWinds-Regular" !important;
+}
+
+.tag__a__strong__due {
+    display: inline-block;
+    transform: rotate(2deg);
+    color: red;
+    font-family: "TradeWinds-Regular" !important;
+}
+
+.tag__a__strong__tre {
+    color: rgba(255, 0, 0, 0.493) !important;
 }

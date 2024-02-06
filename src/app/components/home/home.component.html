@@ -12,7 +12,7 @@
         </div>
 
     </section>
-    <section class="second">
+    <section class="second" #opzione__uno>
         <div class="outer">
             <div class="inner">
                 <div class="bg section__one">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="section__one__inside__due">
-                        <button class="button__circle__big">
+                        <button routerLink="/storie" class="button__circle__big">
                         <button class="button__circle">
                             <h2>Leggi</h2> 
                             <h2>storia</h2>
@@ -51,7 +51,7 @@
         <div class="navbar__sotto__line">
 
         </div>
-        <div class="navbar__sotto__sec__due">
+        <div (click)="scroll(opzione__uno)" class="navbar__sotto__sec__due">
             <h2 id="change__title" style="color:#ff0000">READ SOME STORIES</h2>
         </div>
         <div class="navbar__sotto__line">

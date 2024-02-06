@@ -7,10 +7,10 @@ import { SplitText } from 'gsap/SplitText';
 
 @Component({
     selector: 'app-home',
-    standalone: true,
+    standalone: false,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CommonModule, FooterComponent]
+/*     imports: [CommonModule, FooterComponent] */
 })
 export class HomeComponent {
 
@@ -53,6 +53,7 @@ gsap.set(innerWrappers, { yPercent: -100 });
 function slideIn() {
   if (current !== undefined) gsap.set(sections[current], { zIndex: 0 });
 
+
   gsap.set(sections[next], { autoAlpha: 1, zIndex: 1 });
   gsap.set(images[next], { yPercent: 0 });
   const tl = gsap
@@ -83,13 +84,18 @@ function slideIn() {
         .set(sections[current], { autoAlpha: 0 })
     );
   }
-
   tl.play(0);
+  let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
+  if(sections[next].getAttribute('class') == "third"){
+    navbar__sotto.style.setProperty("display", "none");
+  
+  }else if(sections[next].getAttribute('class') != "third"){
+    navbar__sotto.style.setProperty("display", "grid");
+  }
+
 }
 
 function slideOut() {
-  console.log(current)
-  console.log(next)
   gsap.set(sections[current], { zIndex: 0 });
   gsap.set(sections[next], { autoAlpha: 1, zIndex: 1 });
   
@@ -109,6 +115,20 @@ function slideOut() {
     .to(images[current], { yPercent: 15 }, 0)
     .from(images[next], { yPercent: -15 }, 0)
     .set(images[current], { yPercent: 0 });
+    let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
+  if(sections[next].getAttribute('class') == "third"){
+    navbar__sotto.style.setProperty("display", "none");
+  
+  }else if(sections[next].getAttribute('class') != "third"){
+    navbar__sotto.style.setProperty("display", "grid");
+  }
+/*     let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
+  if(sections[current].getAttribute('class') == "third"){
+    navbar__sotto.style.setProperty("display", "none");
+  
+  }else if(sections[current].getAttribute('class') != "third"){
+    navbar__sotto.style.setProperty("display", "grid");
+  } */
 }
 
 function handleDirection() {
@@ -179,6 +199,8 @@ slideIn();
 
   link__5(){
     window.location.href = "https://www.paypal.me/memoorablesPP?locale.x=it_IT";
+  }
+  scroll(el: HTMLElement) {
   }
 
 }

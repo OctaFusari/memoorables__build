@@ -10,10 +10,16 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChiSiamoComponent } from './components/chi-siamo/chi-siamo.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        StorieComponent, 
+        HomeComponent, 
+        ChiSiamoComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -28,8 +34,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
             {path:"header", component: HeaderComponent},
             {path:"footer", component: FooterComponent},
             { path: 'storie', component: StorieComponent },
-            {path:"**", component:HomeComponent}
-        ]),HeaderComponent
+            {path:"**", component:HomeComponent},
+            {path:"chi-siamo", component:ChiSiamoComponent}
+        ])
     ]
 })
 export class AppModule { }

@@ -98,3 +98,15 @@
 .tag__a__strong__tre {
     color: rgba(255, 0, 0, 0.493) !important;
 }
+
+@media only screen and (max-width:1000px) {
+    .img__due {
+        margin: 700px 0 0 200px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .img__due {
+        display: none;
+    }
+}

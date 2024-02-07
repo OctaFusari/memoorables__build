@@ -9,6 +9,11 @@
     /* Standard syntax */
 }
 
+.sslns {
+    margin: 6vh;
+    text-align: center
+}
+
 .divcenter {
     cursor: pointer;
     width: 60px;
@@ -62,7 +67,7 @@
     height: 19px;
     align-items: center;
     grid-template-columns: 1fr 300px 4fr;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     padding-bottom: 40px;
 }
@@ -197,17 +202,14 @@
 
 @media only screen and (max-width: 1800px) {
     .container__footer__centro {
-        
-        margin:  2vw 0 2vw 0;
+        margin: 2vw 0 2vw 0;
     }
 }
-
 
 @media only screen and (max-width: 1500px) {
     .container__footer__centro__due {
         margin: 0 0 0 150px;
     }
-
 }
 
 @media only screen and (max-width: 1050px) {
@@ -232,37 +234,38 @@
     .desc__left div {
         margin: 10px 0 0 30px;
     }
-        .see__more__big {
-            margin: 0 0 40px 40px;
-            height: 100px !important;
-            width: 100px !important;
-            border-radius: 100px;
-            background-color: #1E1E1E;
-            border: 4px solid #1E1E1E;
-            cursor: pointer;
-        }
-        
-        .see__more__big svg {
-            margin: 26px 32px 32px 26px;
-            position: absolute;
-            z-index: 1;
-        }
-        .see__more__big:hover svg {
-            fill: #ffffff;
-        }
-        
-        .see__more__big:hover h1 {
-            padding-left: 120px;
-        }
-        
-        .see__more__big h1 {
-            position: sticky;
-            z-index: 99;
-            width: 6cm;
-            padding-left: 40px;
-            margin: 34px 32px 32px 0;
-            font-size: 1.5rem !important;
-        }
+    .see__more__big {
+        margin: 0 0 40px 40px;
+        height: 100px !important;
+        width: 100px !important;
+        border-radius: 100px;
+        background-color: #1E1E1E;
+        border: 4px solid #1E1E1E;
+        cursor: pointer;
+    }
+    .see__more__big svg {
+        margin: 26px 32px 32px 26px;
+        position: absolute;
+        z-index: 1;
+    }
+    .see__more__big:hover svg {
+        fill: #ffffff;
+    }
+    .see__more__big:hover h1 {
+        padding-left: 120px;
+    }
+    .see__more__big h1 {
+        position: sticky;
+        z-index: 99;
+        width: 6cm;
+        padding-left: 40px;
+        margin: 34px 32px 32px 0;
+        font-size: 1.5rem !important;
+    }
+    .sslns {
+        margin: 3vh 6vh 6vh 6vh;
+        text-align: center
+    }
 }
 
 @media only screen and (max-width: 800px) {

@@ -109,4 +109,7 @@
     .img__due {
         display: none;
     }
+    .img__uno {
+        margin: 200px 0 0 -250px;
+    }
 }

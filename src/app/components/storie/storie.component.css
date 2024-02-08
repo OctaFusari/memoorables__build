@@ -112,4 +112,7 @@
     .img__uno {
         margin: 200px 0 0 -250px;
     }
+    .cd__interno__secondario__inside {
+        margin-left: -50px;
+    }
 }

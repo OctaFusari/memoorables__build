@@ -49,7 +49,7 @@ section {
     background: linear-gradient(to top, #1e1e1eb9 1%, #1e1e1eb9 99%), url("../../../assets/image__home/img__iniziale.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 }
 

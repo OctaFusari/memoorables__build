@@ -7,11 +7,11 @@ import { StorieComponent } from './components/storie/storie.component';
 import { ChiSiamoComponent } from './components/chi-siamo/chi-siamo.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   {path:"header", component: HeaderComponent},
   {path:"footer", component: FooterComponent},
   {path: 'storie', component: StorieComponent },
-  {path:"", component:ChiSiamoComponent},
+  {path:"chi-siamo", component:ChiSiamoComponent},
   {path:"**", component:ChiSiamoComponent}
 ];
 

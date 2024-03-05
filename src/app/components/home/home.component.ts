@@ -191,7 +191,7 @@ slideIn();
   }
 
   link__3(){
-    window.location.href = "mailto:${project@memoorables.com}";
+    window.location.href = "mailto:project@memoorables.com";
   }
   link__4(){
     window.location.href = "https://www.produzionidalbasso.com/project/all-stories-are-memoorables/";

@@ -11,6 +11,6 @@ import { FooterComponent } from "../footer/footer.component";
 })
 export class StorieComponent {
 
-    secSto:number = 0;
+    secSto:number = 1;
     
 }

@@ -74,13 +74,12 @@
 .cd__interno__secondario__inside__uno {
     display: flex;
     z-index: 900;
-    position: absolute;
     left: 0;
     width: 120px;
     height: 100px;
     transition-duration: .2s;
     cursor: pointer;
-    margin: 50px 0 0 0;
+    margin: 10px 0 40px 0;
 }
 
 .cd__interno__secondario__inside__uno div:first-of-type {

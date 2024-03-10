@@ -103,6 +103,7 @@
 }
 
 #loading__page {
+    padding-top: 100px;
     background-image: url("../../../assets/image__home/tavola1.png");
     background-repeat: no-repeat;
     background-size: cover;

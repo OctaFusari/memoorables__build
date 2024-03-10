@@ -87,6 +87,20 @@ h4 {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .h1__large {
+        font-size: 2.5rem;
+    }
+    .h1__medium {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+    .h1__little {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+}
+
 button {
     cursor: pointer;
 }

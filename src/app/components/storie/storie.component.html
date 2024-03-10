@@ -4,9 +4,16 @@
         <div class="card__storia">
             <h1 class="h1__little" (click)="this.secSto = 1" class="title__font" style="color: #ffffff;">Memoorables</h1>
             <div class="img__uno__storie" (click)="this.secSto = 1">
-                <div class="see__more__big" (click)="this.secSto = 1">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff00" height="40" viewBox="0 -960 960 960" width="40"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
-                    <h3 class="title__font" style="color: #ffffff;">Leggi l'ultima storia</h3>
+                <div>
+                    <div class="card__incipit">
+                        <p>
+                            Leggi la storia rigurdante la nascita del nostro progetto. Un progetto che porta in luce tutte le storie di chi non ha la possibilità di uscire dal buio.
+                        </p>
+                    </div>
+                    <div class="see__more__big" (click)="this.secSto = 1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff00" height="40" viewBox="0 -960 960 960" width="40"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                        <h3 class="title__font" style="color: #ffffff;">Leggi la storia</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,11 +28,11 @@
                 </svg>
             </div>
             <div routerLink="/">
-                <h2 class="title__font">Chiudi storia</h2>
+                <h2 class="title__font" (click)="this.secSto = 0">Chiudi storia</h2>
             </div>
         </div>
         <div class="cd__interno__secondario__inside__due">
-            <!--    (click)="this.secSto = 0"         <div class="next__story">
+            <!--             <div class="next__story">
                 <h2 class="title__font">Prossima storia</h2>
             </div> -->
         </div>

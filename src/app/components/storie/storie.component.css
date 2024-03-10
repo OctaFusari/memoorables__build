@@ -213,15 +213,18 @@
     position: sticky;
 }
 
+.card__incipit {
+    margin: 0 130px 60px 50px;
+}
+
 .img__uno__storie {
     cursor: pointer;
     border-radius: 5px;
     width: 350px;
     height: 500px;
-    background-image: url("../../../assets/image__home/img__iniziale.jpg");
+    background-image: linear-gradient( 180deg, rgba(0, 0, 0, 0.788) 0%, rgba(0, 0, 0, 0.178) 100%), url("../../../assets/image__home/img__iniziale.jpg");
     z-index: 1;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -229,9 +232,6 @@
 }
 
 @media only screen and (max-width:1500px) {
-    .cd__interno__secondario__inside__due {
-        margin-top: 200px;
-    }
     .container__generale {
         padding: 100px 0 0 0;
     }
@@ -240,6 +240,21 @@
 @media only screen and (max-width:1000px) {
     .img__due {
         margin: 700px 0 0 200px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .container__storie__generale {
+        margin: 90px 10px 0 10px;
+        min-height: 100vh;
+    }
+    .h1__storie {
+        z-index: 1;
+        position: fixed;
+        color: #ffffff00;
+        -webkit-text-stroke: 2px #ff00002a;
+        font-size: 8rem;
+        width: 400px;
     }
 }
 
@@ -252,5 +267,8 @@
     }
     .cd__interno__secondario__inside {
         margin-left: -50px;
+    }
+    .img__uno__storie {
+        width: 300px;
     }
 }

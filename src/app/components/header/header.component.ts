@@ -23,4 +23,16 @@ link__4(){
 link__5(){
   window.location.href = "https://www.paypal.me/memoorablesPP?locale.x=it_IT";
 }
+statOpen: boolean = false
+openso(){
+    let nc__2 = document.getElementById("nc__2") as HTMLElement;
+    this.statOpen = !this.statOpen;  
+    console.log(this.statOpen)
+    if(this.statOpen == false){
+      nc__2.style.setProperty("display","block");
+    }else{
+      nc__2.style.setProperty("display","none");
+    }
+    
+  }
 }

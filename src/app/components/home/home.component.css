@@ -75,7 +75,12 @@ section {
     background-size: cover;
     background-position: center;
     background-size: cover;
-    display: grid;
+}
+
+.section__one__inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section__one__inside__one {
@@ -143,4 +148,26 @@ section {
     height: 3px;
     width: 100%;
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .section__one__inside__one div {
+        width: 290px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section__one__inside__one div {
+        margin: 4vh;
+        width: fit-content;
+        max-width: 300px;
+    }
+    .section__one__inside {
+        display: block !important;
+    }
+    .section__one__inside__due {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
 }

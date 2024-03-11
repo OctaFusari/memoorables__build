@@ -110,6 +110,9 @@ section {
     width: 150px;
     height: 150px;
     border-radius: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button__circle {
@@ -118,6 +121,9 @@ section {
     width: 140px;
     height: 140px;
     border-radius: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button__circle:hover {

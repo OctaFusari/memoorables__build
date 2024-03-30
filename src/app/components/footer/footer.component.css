@@ -9,6 +9,20 @@
     /* Standard syntax */
 }
 
+#loading__page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: "." ".";
+    min-height: 100vh;
+}
+
+.descrizione__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .divcenter {
     cursor: pointer;
     width: 60px;
@@ -29,7 +43,6 @@
 }
 
 .container__footer__centro {
-    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,43 +53,26 @@
     display: block;
 }
 
-.container__footer__centro__due__phone {
-    display: none;
-}
-
-.div__fund {
-    cursor: pointer;
-    width: 90px;
-    height: 90px;
-    background-color: #00000000;
-    border: 5px solid #1E1E1E;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .divOcti {
     display: grid;
     width: 100%;
     height: 19px;
     align-items: center;
-    grid-template-columns: 1fr 100px 4fr;
-    position: fixed;
-    bottom: 0;
-    padding-bottom: 40px;
+    grid-template-columns: 1fr 200px 4fr;
 }
 
 .dO_interno {
     width: 100%;
     background-color: #1E1E1E;
-    height: 5px;
+    /*  background-color: #08466E; */
+    height: 2px;
     flex-shrink: 0;
     transition-duration: .2s;
 }
 
-.divOcti:hover .dO_interno {
-    height: 8px;
+.divOcti h5 {
+    color: #1E1E1E !important;
+    font-family: "Montserrat" !important;
 }
 
 .divlat {
@@ -96,17 +92,6 @@
     width: 100%;
     position: relative;
     z-index: 99;
-}
-
-#loading__page {
-    padding: 20vh;
-    height: 70vh;
-}
-
-#loading__page span {
-    font-size: 10rem;
-    font-weight: 800;
-    color: #1e1e1e10;
 }
 
 .desc__left {
@@ -145,16 +130,34 @@
 }
 
 .sostienici__pc {
+    margin: -100px 0 0 70px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.sostienici__phone {
-    padding: 14px;
-    border-radius: 10px;
-    display: none;
+.div__fund {
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
     background-color: #1E1E1E;
+    border: 5px solid #1E1E1E;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.container__footer__centro__due__title {
+    display: flex;
+}
+
+.container__footer__centro__due__title svg {
+    margin-top: 8px;
+}
+
+.container__footer__centro__due__title h2 {
+    margin: 0 40px 0 20px;
 }
 
 .sostienici__phone__interno h4 {
@@ -165,47 +168,34 @@
     .container__footer__centro__due {
         margin: 0 0 0 150px;
     }
-    #loading__page {
-        padding: 20vh 5vh 20vh 5vh;
-    }
 }
 
 @media only screen and (max-width: 1050px) {
     .container__footer__centro__due {
-        margin: 0 0 0 70px;
+        margin: 0 0 0 30px;
     }
 }
 
 @media only screen and (max-width: 970px) {
-    .container__footer__centro__due {
-        display: none;
-    }
-    .container__footer__centro__due__phone {
-        display: block;
-        margin: 20px 0 20px 0;
+    #loading__page {
+        padding-top: 100px;
     }
     .button__black {
         height: 80px;
         width: 80px;
         border-radius: 80px;
     }
-    .sostienici__pc {
-        display: none;
-    }
-    .sostienici__phone {
-        display: block;
-    }
     .desc__left div {
         margin: -80px 0 0 50px;
     }
-}
-
-@media only screen and (max-width: 800px) {
+    .container__footer__centro {
+        display: block;
+    }
     #loading__page p {
         font-size: 1.5rem;
     }
     #loading__page h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .desc__left {
         margin-top: -40px;
@@ -218,5 +208,20 @@
     .social__container {
         margin-left: 40px;
         margin-bottom: 40px;
+    }
+    .div__fund {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        background-color: #1E1E1E;
+        border: 5px solid #1E1E1E;
+        border-radius: 70px;
+        margin: 30px 10px 10px 10px;
+    }
+    .container__footer__centro__due__title h2 {
+        margin: 0 20px 0 10px;
+    }
+    .container__footer__centro__due__svg2 {
+        margin-top: -20px;
     }
 }

@@ -19,7 +19,9 @@ clickEvent(){
 link__4(){
   window.location.href = "https://www.produzionidalbasso.com/project/all-stories-are-memoorables/";
 }
-
+link__3(){
+  window.location.href = "mailto:memoorables@gmail.com";
+}
 link__5(){
   window.location.href = "https://www.paypal.me/memoorablesPP?locale.x=it_IT";
 }

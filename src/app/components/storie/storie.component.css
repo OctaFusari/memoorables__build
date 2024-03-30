@@ -245,7 +245,7 @@
 
 @media only screen and (max-width:800px) {
     .container__storie__generale {
-        margin: 90px 10px 0 10px;
+        margin: 20vh 10px 0 10px;
         min-height: 100vh;
     }
     .h1__storie {

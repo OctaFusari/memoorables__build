@@ -1,7 +1,7 @@
 .container__interno {
     display: flex;
     align-items: center;
-    padding: 40px 2vw 200px 2vw;
+    padding: 10px 2vw 200px 2vw;
     justify-content: center;
 }
 
@@ -223,7 +223,7 @@
 
 @media only screen and (max-width:1500px) {
     .container__generale {
-        padding: 100px 0 0 0;
+        padding: 130px 0 0 0;
     }
 }
 

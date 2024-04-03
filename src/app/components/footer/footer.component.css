@@ -23,6 +23,8 @@
 
 .footer__title__sp {
     display: none;
+    z-index: 1000;
+    position: sticky;
 }
 
 .descrizione__loading {
@@ -68,7 +70,7 @@
 .divOcti {
     display: grid;
     width: 100%;
-    height: 19px;
+    height: 40px;
     align-items: center;
     grid-template-columns: 1fr 200px 4fr;
 }
@@ -219,10 +221,10 @@
         display: block;
     }
     .descrizione__loading {
-        margin-bottom: 20px;
+        margin-bottom: 8px;
     }
     #loading__page {
-        margin-top: 140px;
+        margin-top: 220px;
     }
     .footer__title__pc {
         display: none;

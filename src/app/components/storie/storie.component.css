@@ -54,16 +54,6 @@
     z-index: 2;
 }
 
-.third {
-    position: sticky;
-    z-index: 200;
-    background-image: url("../../../assets/image__home/tavola1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-size: cover;
-}
-
 .cd__interno__secondario__inside {
     display: grid;
     align-items: center;

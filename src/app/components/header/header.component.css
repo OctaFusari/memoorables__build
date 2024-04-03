@@ -29,7 +29,7 @@
     z-index: 1000;
     position: fixed;
     right: 0;
-    width: 120px;
+    width: 105px;
     height: 80px;
     transition-duration: .2s;
     cursor: pointer;
@@ -254,7 +254,21 @@
     }
 }
 
+.menu__pc {
+    display: block;
+}
+
+.menu__phone {
+    display: none;
+}
+
 @media only screen and (max-width: 970px) {
+    .menu__pc {
+        display: none;
+    }
+    .menu__phone {
+        display: block;
+    }
     .nav__contatti .nc__1 {
         border: 1px solid red;
         border-radius: 70px;
@@ -293,12 +307,11 @@
         margin-left: 18px;
     }
     .menu {
-        padding: 0 20px 0 20px;
+        padding: 0 20px 0 40px;
         margin-top: 58px;
     }
     .nav__contatti {
         margin: 0 0px 0 20px;
-        width: 120px;
         height: 80px;
     }
     .cd__interno__secondario {
@@ -315,7 +328,6 @@
 @media only screen and (max-width: 600px) {
     .nav__contatti .nc__1 {
         border: 1px solid red;
-        margin-top: 12px;
     }
     .cd-nav-container {
         display: flex;
@@ -327,8 +339,5 @@
         justify-content: right;
         align-items: center;
         margin: 50px 50px 0 0;
-    }
-    .menu {
-        margin-top: 40px;
     }
 }

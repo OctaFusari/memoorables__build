@@ -64,7 +64,6 @@ section {
 .third .bg {
     background-image: url("../../../assets/image__home/tavola1.png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     background-size: cover;
 }
@@ -136,14 +135,32 @@ section {
     justify-content: space-between;
     z-index: 50;
     bottom: 0;
+    height: 100px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
     overflow-x: hidden !important;
-    display: grid;
-    grid-template-columns: 1fr 300px 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". . .";
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 0 40px 0;
+}
+
+#scroll-down {
+    animation: scrollDownAnimation 3s infinite;
+}
+
+@keyframes scrollDownAnimation {
+    0% {
+        transform: translate(0, 0);
+        fill: white
+    }
+    35% {
+        transform: translate(0, 20px);
+        fill: red;
+    }
+    100% {
+        fill: white
+    }
 }
 
 .navbar__sotto__sec__due {

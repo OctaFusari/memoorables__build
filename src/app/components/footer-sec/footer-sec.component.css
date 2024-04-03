@@ -10,8 +10,11 @@
 }
 
 #loading__page {
-    margin-top: 400px;
-    min-height: 100vh;
+    padding-top: 100px;
+    background-image: url("../../../assets/image__home/tavola1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .footer__title__pc {
@@ -68,7 +71,7 @@
 .divOcti {
     display: grid;
     width: 100%;
-    height: 19px;
+    height: 100px;
     align-items: center;
     grid-template-columns: 1fr 200px 4fr;
 }

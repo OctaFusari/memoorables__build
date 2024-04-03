@@ -19,6 +19,7 @@ import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { getPerformance, providePerformance } from '@angular/fire/performance';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
+import { FooterSecComponent } from './components/footer-sec/footer-sec.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-confi
         FooterComponent,
         StorieComponent, 
         HomeComponent, 
-        ChiSiamoComponent
+        ChiSiamoComponent,
+        FooterSecComponent
     ],
     providers: [
         ScreenTrackingService,

@@ -1,3 +1,24 @@
-<app-header></app-header>
-<router-outlet style="position:sticky;z-index: 0;">
+<div *ngIf="this.loading == 0" class="loading__page__app">
+    <div>
+        <h1 style="color: #1E1E1E">All stories are</h1>
+        <!--         <div style="display: flex;">
+            <h1 class="h1__large lpa__1 ">M</h1>
+            <h1 class="h1__large lpa__2 ">E</h1>
+            <h1 class="h1__large lpa__3 ">M</h1>
+            <h1 class="h1__large lpa__4 ">O</h1>
+            <h1 class="h1__large lpa__5 ">O</h1>
+            <h1 class="h1__large lpa__6 ">R</h1>
+            <h1 class="h1__large lpa__7 ">A</h1>
+            <h1 class="h1__large lpa__8 ">B</h1>
+            <h1 class="h1__large lpa__9 ">L</h1>
+            <h1 class="h1__large lpa__10">E</h1>
+            <h1 class="h1__large lpa__11">S</h1>
+        </div> -->
+        <div>
+            <h1 class="h1__large" id="appTyping">MEMOORABLES</h1>
+        </div>
+    </div>
+</div>
+<app-header *ngIf="this.loading == 1"></app-header>
+<router-outlet *ngIf="this.loading == 1" style="position:sticky;z-index: 0;">
 </router-outlet>

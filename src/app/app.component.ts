@@ -1,16 +1,39 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+
+  constructor(private elementRef: ElementRef<HTMLElement>) {}
   title = 'memoorables';
   
-  ngOnInit(): void {
+  loading:number = 0;
 
-}
+  ngAfterViewInit(): void {
+    const element = document.getElementById("section") as HTMLElement;
+    const text = element.innerText;
+    element.innerText = '';
+
+    let i = 0;
+    const type = () => {
+      if (i < text.length) {
+        element.innerText += text.charAt(i);
+        i++;
+        setTimeout(type, 100); // Adjust typing speed as needed
+      }
+    };
+
+    type();
+  }
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loading = 1
+    }, 3000);
+  }
 }
 
 

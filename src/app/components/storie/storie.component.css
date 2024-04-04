@@ -203,6 +203,34 @@
     position: sticky;
 }
 
+.card__storia {
+    animation: cardanimation 2s ease-out;
+    transform: rotate(0deg);
+}
+
+@keyframes cardanimation {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    15% {
+        opacity: 1;
+        transform: rotate(-2deg);
+    }
+    30% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(-.5deg);
+    }
+    70% {
+        transform: rotate(.2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .card__incipit {
     margin: 0 130px 60px 50px;
 }

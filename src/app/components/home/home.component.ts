@@ -27,6 +27,13 @@ export class HomeComponent {
     document.addEventListener("touchmove", handleTouchMove);
     document.addEventListener("touchend", handleTouchEnd);
 
+    let mem__big = document.getElementById('mem__big')as HTMLElement;
+    window.addEventListener('mousemove', (event: any) => {
+      setTimeout(() => {
+        mem__big.style.setProperty("-webkit-text-stroke", "2px #ff00002a");
+      }, 500);
+      mem__big.style.setProperty("-webkit-text-stroke", "2px #ff000049");
+    })
     
       let listening = false,
         direction = "down",
@@ -87,11 +94,18 @@ export class HomeComponent {
         }
         tl.play(0);
         let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
+        let second = document.getElementById('second')as HTMLElement;
         if (sections[next].getAttribute('class') == "third") {
           navbar__sotto.style.setProperty("display", "none");
 
         } else if (sections[next].getAttribute('class') != "third") {
           navbar__sotto.style.setProperty("display", "grid");
+        }
+        if (sections[next].getAttribute('class') == "second") {
+          second.style.setProperty("display", "flex");
+
+        } else if (sections[next].getAttribute('class') != "second") {
+          second.style.setProperty("display", "none");
         }
 
       }
@@ -117,11 +131,18 @@ export class HomeComponent {
           .from(images[next], { yPercent: -15 }, 0)
           .set(images[current], { yPercent: 0 });
         let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
+        let second = document.getElementById('second')as HTMLElement;
         if (sections[next].getAttribute('class') == "third") {
           navbar__sotto.style.setProperty("display", "none");
 
         } else if (sections[next].getAttribute('class') != "third") {
           navbar__sotto.style.setProperty("display", "grid");
+        }
+        if (sections[next].getAttribute('class') == "second") {
+          second.style.setProperty("display", "flex");
+
+        } else if (sections[next].getAttribute('class') != "second") {
+          second.style.setProperty("display", "none");
         }
       }
 

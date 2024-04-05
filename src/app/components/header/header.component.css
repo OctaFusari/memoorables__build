@@ -241,6 +241,9 @@
     .cd__interno__secondario__inside div:last-of-type {
         width: 7%;
     }
+    .cd__interno__secondario__inside:hover div:last-of-type {
+        width: 108%;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -267,6 +270,9 @@
 }
 
 @media only screen and (max-width: 970px) {
+    .cd__interno__secondario__inside:hover div:last-of-type {
+        width: 104%;
+    }
     .menu__pc {
         display: none;
     }
@@ -293,6 +299,9 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .cd__interno__secondario__inside:hover div:last-of-type {
+        width: 102%;
+    }
     .img__uno {
         width: 300px;
         height: 500px;

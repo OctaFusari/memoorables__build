@@ -95,11 +95,11 @@ export class HomeComponent {
         tl.play(0);
         let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
         let second = document.getElementById('second')as HTMLElement;
-        if (sections[next].getAttribute('class') == "third") {
-          navbar__sotto.style.setProperty("display", "none");
-
-        } else if (sections[next].getAttribute('class') != "third") {
+        if (sections[next].getAttribute('class') == "first") {
           navbar__sotto.style.setProperty("display", "grid");
+
+        } else {
+          navbar__sotto.style.setProperty("display", "none");
         }
         if (sections[next].getAttribute('class') == "second") {
           second.style.setProperty("display", "flex");
@@ -132,12 +132,13 @@ export class HomeComponent {
           .set(images[current], { yPercent: 0 });
         let navbar__sotto = document.getElementById('navbar__sotto') as HTMLElement;
         let second = document.getElementById('second')as HTMLElement;
-        if (sections[next].getAttribute('class') == "third") {
-          navbar__sotto.style.setProperty("display", "none");
-
-        } else if (sections[next].getAttribute('class') != "third") {
+        if (sections[next].getAttribute('class') == "first") {
           navbar__sotto.style.setProperty("display", "grid");
+
+        } else {
+          navbar__sotto.style.setProperty("display", "none");
         }
+
         if (sections[next].getAttribute('class') == "second") {
           second.style.setProperty("display", "flex");
 

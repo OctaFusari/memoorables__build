@@ -278,6 +278,7 @@ h1 {
     }
     .section__one__inside {
         display: block !important;
+        margin-top: 60px;
     }
     .section__one__inside__due {
         display: flex;

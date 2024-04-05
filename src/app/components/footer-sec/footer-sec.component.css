@@ -10,7 +10,7 @@
 }
 
 #loading__page {
-    padding-top: 100px;
+    padding-top: 14vh;
     background-image: url("../../../assets/image__home/tavola1.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -190,7 +190,7 @@
         margin-bottom: 20px;
     }
     #loading__page {
-        margin-top: 140px;
+        padding-top: 20vh;
     }
     .footer__title__pc {
         display: none;

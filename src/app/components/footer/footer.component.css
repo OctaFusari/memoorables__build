@@ -10,7 +10,7 @@
 }
 
 #loading__page {
-    margin-top: 400px;
+    margin-top: 30vh;
     min-height: 100vh;
 }
 
@@ -241,7 +241,7 @@
         margin-bottom: 8px;
     }
     #loading__page {
-        margin-top: 300px;
+        margin-top: 40vh;
     }
     .footer__title__pc {
         display: none;

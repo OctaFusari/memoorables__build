@@ -233,6 +233,10 @@
     height: 3px;
 }
 
+.cd__interno__secondario__inside:hover div:last-of-type {
+    width: 110%;
+}
+
 @media only screen and (max-width: 1200px) {
     .cd__interno__secondario__inside div:last-of-type {
         width: 7%;

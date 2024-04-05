@@ -14,15 +14,16 @@ export class StorieComponent {
     secSto:number = 0;
     secStoInt:number = 0;
     ngOnInit(): void {
-        if(this.secStoInt == 1){
-        window.addEventListener('scroll', function () {
-                const img__tre:any = document.querySelector('.img__tre');
-                const img__due:any = document.querySelector('.img__due');
-                const scrollValue = window.scrollY;
-                img__tre.style.transform = `translateY(${scrollValue * 0.003}cm)`;
-                img__due.style.transform = `translateY(${scrollValue * 0.001}cm)`;
-        }); 
-        }
+        let secStoIntInt = this.secStoInt;
+            window.addEventListener('scroll', function () {
+                if(secStoIntInt == 1){
+                    const img__tre:any = document.querySelector('.img__tre');
+                    const img__due:any = document.querySelector('.img__due');
+                    const scrollValue = window.scrollY;
+                    img__tre.style.transform = `translateY(${scrollValue * 0.003}cm)`;
+                    img__due.style.transform = `translateY(${scrollValue * 0.001}cm)`;
+                }
+            }); 
     }
 
     checkOpenStoria(){
@@ -30,6 +31,7 @@ export class StorieComponent {
         if(this.secSto == 1){
             setTimeout(() => {
                this.secStoInt = 1
+               this.ngOnInit()
             }, 3000);
         }
     }

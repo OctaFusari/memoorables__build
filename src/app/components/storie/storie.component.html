@@ -2,15 +2,15 @@
     <h1 class="h1__large h1__storie">Ogni storia ha importanza</h1>
     <div class="cd__interno__primario">
         <div class="card__storia">
-            <h1 class="h1__little" (click)="this.secSto = 1" class="title__font" style="color: #ffffff;">Memoorables</h1>
-            <div class="img__uno__storie" (click)="this.secSto = 1">
+            <h1 class="h1__little" (click)="checkOpenStoria()" class="title__font" style="color: #ffffff;">Memoorables</h1>
+            <div class="img__uno__storie" (click)="checkOpenStoria()">
                 <div>
                     <div class="card__incipit">
                         <p>
                             Leggi la storia rigurdante la nascita del nostro progetto. Un progetto che porta in luce tutte le storie di chi non ha la possibilità di uscire dal buio.
                         </p>
                     </div>
-                    <div class="see__more__big" (click)="this.secSto = 1">
+                    <div class="see__more__big" (click)="checkOpenStoria()">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff00" height="40" viewBox="0 -960 960 960" width="40"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                         <h3 class="title__font" style="color: #ffffff;">Leggi la storia</h3>
                     </div>
@@ -20,59 +20,64 @@
     </div>
 </div>
 <div class="container__generale" *ngIf="this.secSto == 1">
-    <div class="cd__interno__secondario__inside">
-        <div class="cd__interno__secondario__inside__uno">
-            <div>
-                <svg width="100" height="3" viewBox="0 0 100 3" fill="#ff0000" xmlns="http://www.w3.org/3500/svg">
-                    <line y1="1.5" x2="100" y2="1.5" stroke="#ff0000" stroke-width="3"/>
-                </svg>
-            </div>
-            <div routerLink="/">
-                <h2 class="title__font" (click)="this.secSto = 0">Chiudi storia</h2>
-            </div>
+    <div *ngIf="this.secStoInt == 0" class="container__generale__loading">
+        <div class="car__storie__text">
+            <h1>All stories are memoorables</h1>
+            <a style="color: red;">Buona lettura</a>
         </div>
-        <!--         <div class="cd__interno__secondario__inside__due">
-                        <div class="next__story">
-                <h2 class="title__font">Prossima storia</h2>
-            </div>
-        </div> -->
+        <div class="car__storie__img__1"></div>
+        <div class="car__storie__img__2"></div>
     </div>
-    <div class="container__interno">
-        <div class="container__interno__flex">
-            <div class="container__interno__sezione__uno">
-                <h1 class="h1__large">All stories are memoorabes</h1>
-            </div>
-            <div class="container__interno__sezione__due">
-                <div class="img__uno"></div>
-                <div class="img__due"></div>
-                <div class="testo">
-                    <h1 class="h1__medium"><strong>Cosa facciamo</strong></h1>
-                    <p>Memoorables è un progetto fatto di <strong>storie</strong>.&nbsp;<br> Storie di cui non si parla per <span class="tag__a__strong__uno">pigrizia o paura</span>, per disinteresse imposto o abitudine ad abnegare argomenti che sembrano
-                        non poterci toccare da vicino.&nbsp;<br><strong>Memoorables è di tutti e per tutti</strong>, per questo racconterà persone e verità che si nascondono sotto ad un <span class="tag__a__strong__tre">(quasi invisibile)</span> strato
-                        di <span class="tag__a__strong__due">omertà sociale</span>.</p>
-                    <p><br><em>Cosa vuol dire&nbsp;vendere il proprio corpo per <span class="tag__a__strong__uno">sopravvivere?&nbsp;</span>Che cosa significa essere&nbsp;schiacciati da&nbsp;un dogma religioso senza avere la possibilità di scegliere a&nbsp;cosa credere? Che ruolo ha la droga per un <span class="tag__a__strong__due">ex tossico dipendente?</span> Un soldato russo, oggi, soffre dello stigma che esiste solo a causa del suo lavoro? Come si convive con un disturbo di personalità multipla?&nbsp;</em></p>
-                    <p><br></p>
-                    <p>Memoorables affronterà argomenti attuali, poco esplorati e l'obbiettivo del progetto&nbsp;sarà risvegliare le coscienze, far discutere, <span class="tag__a__strong__uno">accendere il fuoco del dibattito</span> senza alcun limite ad
-                        opinioni, pensieri o schieramenti.&nbsp;</p>
-                    <p>Memoorables prende linfa vitale dalla condivisione e <strong>non avrà niente a che vedere con l'attivismo giornalistico o la forma del reportage</strong>; Memoorables è arte.&nbsp;Il meccanismo chiave del progetto è quello di vivere
-                        la storia che si racconta con neutralità e trasporto. Incontreremo i protagonisti delle storie che racconteremo per far sì che anche lo spettatore si senta al suo fianco. Per qualche istante
-                        <span class="tag__a__strong__due">vivremo la sua vita</span>, ci nutriremo delle sue esperienze per raccontarle.&nbsp;Oggi, l’influenza di qualsiasi informazione o informatore ci guida imponendoci di avere un’opinione condivisibile
-                        o&nbsp;un’idea che prenda una precisa piega <span class="tag__a__strong__uno">sociale e politica</span>; Memoorables scardinerà questo meccanismo ormai introiettato da tutti. <strong>Il progetto nasce e crescerà mosso dalla volontà e dal piacere di raccontare storie umane, vive&nbsp;narrandole così come sono nel loro  <span class="tag__a__strong__uno">naturale esistere.</span>&nbsp;</strong></p>
-                    <p></p>
-                    <h1 class="h1__medium"><strong>Come lo facciamo</strong></h1>
-                    <p>Il nostro obbiettivo è quello di generare domande e non di dare risposte. Lo faremo tramite tre diversi mezzi: <span class="tag__a__strong__due">la parola, la fotografia e il video.</span>&nbsp;<br> L’arte della parola, la magia della
-                        fotografia e il potere dell’audiovisivo saranno lo scheletro grazie al quale le storie che racconteremo prenderanno vita.&nbsp;<br> Memoorables si svilupperà grazie ad un <strong>sito web</strong>, con accesso sia da smartphone
-                        che da desktop, collegato alle <strong>piattaforme social </strong>più frequentate (TikTok /Instagram) ma non si fermerà qui.&nbsp;Ogni storia condivisa, ogni fotografia scattata partorirà un <span class="tag__a__strong__uno">concreto progetto</span>                        che tenterà di <span class="tag__a__strong__uno">invadere</span> i muri, le strade, le caffetterie o le scuole del paese in cui viviamo.&nbsp;<strong>Ci spingeremo fino alla propaganda fisica delle storie che desideriamo fare arrivare a tutti </strong>e,
-                        solo allora, Memoorables darà lo schiaffo che pretendiamo si scagli su ogni spettatore.&nbsp;</p>
-                    <p></p>
-                    <h1 class="h1__medium"><strong>A che punto siamo</strong></h1>
-                    <p>Lo sviluppo del progetto è a buon punto.&nbsp;<br> L’ideazione del progetto, il nostro team, gli&nbsp;argomenti che vogliamo trattare e&nbsp;il sito web che ci permetterà di <span class="tag__a__strong__due">arrivare ovunque</span>,
-                        sono già pronti.&nbsp;<br> Quello che rimane da fare è trovare chi possa aiutarci, sponsor e persone che credono in questo&nbsp;nuovo,&nbsp;giovane e alternativo modo di raccontare le storie di <span class="tag__a__strong__uno">tutti e per tutti.</span>&nbsp;</p>
-                    <h1 class="h1__medium"><strong>Chi siamo</strong></h1>
-                    <p>Le storie non sono proprietà di chi le racconta. Siamo tutti voi, tutti loro, tutti e nessuno.&nbsp;<br><strong>Memoorables: tutte le storie contano.&nbsp;</strong></p>
+    <div *ngIf="this.secStoInt == 1" class="container__generale__loaded">
+        <div class="cd__interno__secondario__inside">
+            <div class="cd__interno__secondario__inside__uno">
+                <div>
+                    <svg width="100" height="3" viewBox="0 0 100 3" fill="#ff0000" xmlns="http://www.w3.org/3500/svg">
+                        <line y1="1.5" x2="100" y2="1.5" stroke="#ff0000" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div routerLink="/">
+                    <h2 class="title__font" (click)="this.secSto = 0; this.secStoInt = 0">Chiudi storia</h2>
                 </div>
             </div>
+        </div>
+        <div class="container__interno">
+            <div class="container__interno__flex">
+                <div class="container__interno__sezione__uno">
+                    <h1 class="h1__large">All stories are memoorabes</h1>
+                </div>
+                <div class="container__interno__sezione__due">
+                    <div class="img__tre"></div>
+                    <div class="img__due"></div>
+                    <div class="testo">
+                        <h1 class="h1__medium"><strong>Cosa facciamo</strong></h1>
+                        <p>Memoorables è un progetto fatto di <strong>storie</strong>.&nbsp;<br> Storie di cui non si parla per <span class="tag__a__strong__uno">pigrizia o paura</span>, per disinteresse imposto o abitudine ad abnegare argomenti che sembrano
+                            non poterci toccare da vicino.&nbsp;<br><strong>Memoorables è di tutti e per tutti</strong>, per questo racconterà persone e verità che si nascondono sotto ad un <span class="tag__a__strong__tre">(quasi invisibile)</span> strato
+                            di <span class="tag__a__strong__due">omertà sociale</span>.</p>
+                        <p><br><em>Cosa vuol dire&nbsp;vendere il proprio corpo per <span class="tag__a__strong__uno">sopravvivere?&nbsp;</span>Che cosa significa essere&nbsp;schiacciati da&nbsp;un dogma religioso senza avere la possibilità di scegliere a&nbsp;cosa credere? Che ruolo ha la droga per un <span class="tag__a__strong__due">ex tossico dipendente?</span> Un soldato russo, oggi, soffre dello stigma che esiste solo a causa del suo lavoro? Come si convive con un disturbo di personalità multipla?&nbsp;</em></p>
+                        <p><br></p>
+                        <p>Memoorables affronterà argomenti attuali, poco esplorati e l'obbiettivo del progetto&nbsp;sarà risvegliare le coscienze, far discutere, <span class="tag__a__strong__uno">accendere il fuoco del dibattito</span> senza alcun limite
+                            ad opinioni, pensieri o schieramenti.&nbsp;</p>
+                        <p>Memoorables prende linfa vitale dalla condivisione e <strong>non avrà niente a che vedere con l'attivismo giornalistico o la forma del reportage</strong>; Memoorables è arte.&nbsp;Il meccanismo chiave del progetto è quello di vivere
+                            la storia che si racconta con neutralità e trasporto. Incontreremo i protagonisti delle storie che racconteremo per far sì che anche lo spettatore si senta al suo fianco. Per qualche istante
+                            <span class="tag__a__strong__due">vivremo la sua vita</span>, ci nutriremo delle sue esperienze per raccontarle.&nbsp;Oggi, l’influenza di qualsiasi informazione o informatore ci guida imponendoci di avere un’opinione condivisibile
+                            o&nbsp;un’idea che prenda una precisa piega <span class="tag__a__strong__uno">sociale e politica</span>; Memoorables scardinerà questo meccanismo ormai introiettato da tutti. <strong>Il progetto nasce e crescerà mosso dalla volontà e dal piacere di raccontare storie umane, vive&nbsp;narrandole così come sono nel loro  <span class="tag__a__strong__uno">naturale esistere.</span>&nbsp;</strong></p>
+                        <p></p>
+                        <h1 class="h1__medium"><strong>Come lo facciamo</strong></h1>
+                        <p>Il nostro obbiettivo è quello di generare domande e non di dare risposte. Lo faremo tramite tre diversi mezzi: <span class="tag__a__strong__due">la parola, la fotografia e il video.</span>&nbsp;<br> L’arte della parola, la magia
+                            della fotografia e il potere dell’audiovisivo saranno lo scheletro grazie al quale le storie che racconteremo prenderanno vita.&nbsp;<br> Memoorables si svilupperà grazie ad un <strong>sito web</strong>, con accesso sia da
+                            smartphone che da desktop, collegato alle <strong>piattaforme social </strong>più frequentate (TikTok /Instagram) ma non si fermerà qui.&nbsp;Ogni storia condivisa, ogni fotografia scattata partorirà un <span class="tag__a__strong__uno">concreto progetto</span>                            che tenterà di <span class="tag__a__strong__uno">invadere</span> i muri, le strade, le caffetterie o le scuole del paese in cui viviamo.&nbsp;<strong>Ci spingeremo fino alla propaganda fisica delle storie che desideriamo fare arrivare a tutti </strong>e,
+                            solo allora, Memoorables darà lo schiaffo che pretendiamo si scagli su ogni spettatore.&nbsp;</p>
+                        <p></p>
+                        <h1 class="h1__medium"><strong>A che punto siamo</strong></h1>
+                        <p>Lo sviluppo del progetto è a buon punto.&nbsp;<br> L’ideazione del progetto, il nostro team, gli&nbsp;argomenti che vogliamo trattare e&nbsp;il sito web che ci permetterà di <span class="tag__a__strong__due">arrivare ovunque</span>,
+                            sono già pronti.&nbsp;<br> Quello che rimane da fare è trovare chi possa aiutarci, sponsor e persone che credono in questo&nbsp;nuovo,&nbsp;giovane e alternativo modo di raccontare le storie di <span class="tag__a__strong__uno">tutti e per tutti.</span>&nbsp;</p>
+                        <h1 class="h1__medium"><strong>Chi siamo</strong></h1>
+                        <p>Le storie non sono proprietà di chi le racconta. Siamo tutti voi, tutti loro, tutti e nessuno.&nbsp;<br><strong>Memoorables: tutte le storie contano.&nbsp;</strong></p>
+                    </div>
+                </div>
 
+            </div>
         </div>
     </div>
 </div>

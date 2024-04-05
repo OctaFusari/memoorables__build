@@ -1,11 +1,11 @@
 .container__interno {
     display: flex;
     align-items: center;
-    padding: 10px 2vw 200px 2vw;
+    padding: 10px 4vw 200px 4vw;
     justify-content: center;
 }
 
-.container__generale {
+.container__generale__loaded {
     padding: 160px 0 0 0;
 }
 
@@ -21,37 +21,140 @@
     margin-top: 100px;
 }
 
-.img__uno {
+.container__interno__sezione__uno {
+    animation: textnimation3 1s ease-in-out;
+}
+
+@keyframes textnimation3 {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+.container__generale__loading {
+    background-color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: sticky;
+    z-index: 100000;
+    animation: container__generale__loading 3s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes container__generale__loading {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.car__storie__img__1 {
+    margin: 4vh 0 4vh 4vh;
+    width: 40vw;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+    z-index: 99;
+    background-image: url("../../../assets/image__home/53f1c781-b360-4f69-b439-aa984afd8d08_8ooaa7y.jpg");
+    animation: imgnimation1 3s ease-out;
+}
+
+@keyframes imgnimation1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -40px);
+    }
+}
+
+.car__storie__img__2 {
+    margin: 4vh 4vh 0 4vh;
+    width: 40vw;
+    height: 80vh;
+    z-index: 99;
+    position: sticky;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../assets/image__home/img__iniziale.jpg");
+    animation: imgnimation2 3s ease-in-out;
+}
+
+@keyframes imgnimation2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 40px);
+    }
+}
+
+.car__storie__text {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img__due {
     width: 600px;
     height: 800px;
     background-image: url("../../../assets/image__home/img__iniziale.jpg");
-    position: absolute;
     z-index: 1;
     margin: 200px 0 0 -150px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-size: cover;
     opacity: .1;
+    position: absolute;
+    transform: translateZ(0);
+    scroll-behavior: smooth;
 }
 
-.img__due {
+.img__tre {
     background-image: url("../../../assets/image__home/53f1c781-b360-4f69-b439-aa984afd8d08_8ooaa7y.jpg");
     width: 600px;
     height: 800px;
-    position: absolute;
     z-index: 1;
     margin: 700px 0 0 800px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-size: cover;
     opacity: .1;
+    position: absolute;
+    transform: translateZ(0);
+    scroll-behavior: smooth;
 }
 
 .testo {
     position: sticky;
     z-index: 2;
+    animation: textnimation2 1s ease-out;
+}
+
+@keyframes textnimation2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .cd__interno__secondario__inside {
@@ -109,6 +212,25 @@
     transform: rotate(-4deg);
     color: red;
     font-family: "TradeWinds-Regular" !important;
+    animation: textnimation1 1s ease-out;
+}
+
+@keyframes textnimation1 {
+    0% {
+        color: red;
+    }
+    25% {
+        color: rgba(255, 0, 0, 0);
+    }
+    60% {
+        color: rgba(255, 0, 0, 0.548);
+    }
+    70% {
+        color: rgba(255, 0, 0, 0);
+    }
+    100% {
+        color: red;
+    }
 }
 
 .tag__a__strong__due {
@@ -116,10 +238,39 @@
     transform: rotate(2deg);
     color: red;
     font-family: "TradeWinds-Regular" !important;
+    animation: textnimation 1s ease-out;
+}
+
+@keyframes textnimation {
+    0% {
+        color: rgba(255, 0, 0, 0);
+    }
+    25% {
+        color: red;
+    }
+    60% {
+        color: rgba(255, 0, 0, 0.212);
+    }
+    70% {
+        color: rgba(255, 0, 0, 0);
+    }
+    100% {
+        color: red;
+    }
 }
 
 .tag__a__strong__tre {
     color: rgba(255, 0, 0, 0.493) !important;
+    animation: textnimation2 2s ease-out;
+}
+
+@keyframes textnimation2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -250,7 +401,7 @@
 }
 
 @media only screen and (max-width:1500px) {
-    .container__generale {
+    .container__generale__loaded {
         padding: 130px 0 0 0;
     }
 }
